@@ -14,11 +14,10 @@ Goal:
 
 Deployment:
 
-- primary path: GitHub push to `main` triggers a GitHub Actions deploy to cPanel over SSH
-- fallback path: cPanel Git Version Control can still be used for manual pull/deploy checks
+- primary path: GitHub push to `main` triggers a GitHub Actions deploy to the server over FTPS
+- manual fallback: cPanel Git Version Control can still be used for pull/deploy checks
 - required secrets for the automatic path:
-  - `CPANEL_HOST`
-  - `CPANEL_USER`
-  - `CPANEL_PORT`
-  - `CPANEL_SSH_KEY`
-  - `CPANEL_DOCROOT`
+  - `FTP_SERVER`
+  - `FTP_USERNAME`
+  - `FTP_PASSWORD`
+- note: shell access is not enabled on this hosting account yet, so FTP is the active deploy bridge for now

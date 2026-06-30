@@ -1,4 +1,4 @@
-name: Deploy BeautifulGrowth to cPanel
+name: Deploy BeautifulGrowth to cPanel FTP
 
 on:
   push:
@@ -14,13 +14,19 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Sync site files to cPanel
-        uses: burnett01/rsync-deployments@7.0.2
+      - name: Sync site files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          switches: -az
-          path: ./
-          remote_host: ${{ secrets.CPANEL_HOST }}
-          remote_user: ${{ secrets.CPANEL_USER }}
-          remote_port: ${{ secrets.CPANEL_PORT }}
-          remote_path: ${{ secrets.CPANEL_DOCROOT }}
-          remote_key: ${{ secrets.CPANEL_SSH_KEY }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          server-dir: /
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            README.md
+            .cpanel.yml
