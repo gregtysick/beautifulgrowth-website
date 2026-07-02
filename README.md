@@ -15,6 +15,7 @@ Goal:
 Deployment:
 
 - primary path: GitHub push to `main` triggers a GitHub Actions deploy to the server over FTPS
+- deploy target: `public_html/` on the Namecheap cPanel account
 - manual fallback: cPanel Git Version Control can still be used for pull/deploy checks
 - required secrets for the automatic path:
   - `FTP_SERVER`
