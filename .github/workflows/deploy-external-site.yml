@@ -1,0 +1,44 @@
+name: Deploy external site to cPanel FTP
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_repo:
+        description: GitHub repository to publish
+        required: true
+        default: gregtysick/beautifulclicks-website
+      source_ref:
+        description: Branch or tag to publish
+        required: true
+        default: main
+      server_dir:
+        description: Target folder on the FTP server
+        required: true
+        default: public_html/beautifulclicks.com/
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source repository
+        run: |
+          git clone --depth 1 --branch "${{ inputs.source_ref }}" "https://github.com/${{ inputs.source_repo }}.git" source
+
+      - name: Sync site files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./source/
+          server-dir: ${{ inputs.server_dir }}
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            README.md
