@@ -3,41 +3,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="BeautifulGrowth helps owner-led businesses grow with clearer direction, smoother operations, and smarter systems." />
-    <title>BeautifulGrowth</title>
+    <meta name="theme-color" content="#081014" />
+    <meta name="description" content="BeautifulGrowth helps owner-led businesses strengthen their online presence, simplify operations, and put smarter systems to work." />
+    <title>BeautifulGrowth | Business Growth &amp; Operations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <section class="hero">
-        <div class="eyebrow">Beautiful Insights Inc.</div>
-        <h1>BeautifulGrowth</h1>
-        <p class="lead">
-          Business development and smarter systems for owner-led companies. Clearer direction, smoother operations, and more room to grow.
-        </p>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="BeautifulGrowth home">Beautiful<span>Growth</span></a>
+        <span class="header-note">Growth &amp; operations for owner-led businesses</span>
+      </header>
 
-        <div class="actions">
-          <a class="button button-primary" href="mailto:hello@beautifulgrowth.co">Contact</a>
+      <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+          <p class="eyebrow">Practical strategy. Smarter systems.</p>
+          <h1 id="hero-title">Make your business easier to run and easier to grow.</h1>
+          <p class="lead">We help owner-led businesses strengthen their online presence, simplify operations, and put smarter systems to work.</p>
+          <p class="supporting">From websites and customer follow-up to workflow automation and practical AI, we connect the pieces that help your business work better.</p>
+
+          <div class="actions">
+            <a class="button button-primary" href="#services">Explore our services</a>
+            <a class="button button-secondary" href="mailto:hello@beautifulgrowth.co?subject=Let%27s%20talk%20about%20my%20business">Start a conversation</a>
+          </div>
+        </section>
+
+        <section class="services" id="services" aria-labelledby="services-heading">
+          <div class="section-heading">
+            <p class="section-kicker">What we do</p>
+            <h2 id="services-heading">Different needs. Connected thinking.</h2>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <h3>BeautifulGrowth</h3>
+              <p>Business strategy, smarter operations, and connected systems that reduce manual work and make growth easier to manage.</p>
+            </article>
+            <article class="card">
+              <h3>BeautifulClicks</h3>
+              <p>Modern websites, stronger messaging, and smarter lead capture that help businesses make a better first impression and turn interest into action.</p>
+            </article>
+            <article class="card">
+              <div class="card-heading">
+                <h3>BeautifulLedgers</h3>
+                <span class="development-tag">In development</span>
+              </div>
+              <p>Smarter accounting workflows, connected financial systems, and clearer reporting with less manual bookkeeping.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="approach" aria-labelledby="approach-heading">
+          <div class="section-heading">
+            <p class="section-kicker">How we work</p>
+            <h2 id="approach-heading">Start with the business, not the tool.</h2>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-number" aria-hidden="true">01</span>
+              <h3>Understand the business</h3>
+              <p>Learn what matters, how work happens today, and what you want to improve.</p>
+            </div>
+            <div class="step">
+              <span class="step-number" aria-hidden="true">02</span>
+              <h3>Identify the friction</h3>
+              <p>Find the gaps, manual steps, and missed opportunities worth addressing first.</p>
+            </div>
+            <div class="step">
+              <span class="step-number" aria-hidden="true">03</span>
+              <h3>Build practical improvements</h3>
+              <p>Connect the right people, processes, and technology into something that works.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <p class="footer-brand">BeautifulGrowth</p>
+          <p class="footer-legal">BeautifulGrowth is operated by Beautiful Insights Inc.</p>
         </div>
-      </section>
-
-      <section class="grid" id="services">
-        <article class="card">
-          <h2>BeautifulGrowth</h2>
-          <p>Business development strategy, smarter operations, and intelligent automation that connects your systems and keeps work moving.</p>
-        </article>
-        <article class="card">
-          <h2>BeautifulClicks</h2>
-          <p>Websites and landing pages that make your business easier to find, understand, and choose, with inquiry and follow-up systems to match.</p>
-        </article>
-        <article class="card">
-          <h2>BeautifulLedgers</h2>
-          <p>A future offering focused on clearer financial workflows, connected accounting systems, and less manual bookkeeping.</p>
-        </article>
-      </section>
-    </main>
+        <div class="footer-contact">
+          <span>Have something in mind?</span>
+          <a href="mailto:hello@beautifulgrowth.co">hello@beautifulgrowth.co</a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
