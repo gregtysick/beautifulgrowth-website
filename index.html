@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#081014" />
+    <meta name="theme-color" content="#0b1113" />
     <meta name="description" content="BeautifulGrowth helps owner-led businesses strengthen their online presence, simplify operations, and put smarter systems to work." />
     <title>BeautifulGrowth | Business Growth &amp; Operations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -433,6 +433,68 @@ h1 {
 @media (prefers-reduced-motion:reduce) {
   .card { transition:none; }
   .card:hover { transform:none; }
+}
+
+    
+/* Final palette polish: charcoal + soft sage instead of bright cyan. */
+:root {
+  --bg: #0b1113;
+  --bg-soft: rgba(18, 28, 30, .90);
+  --text: #f1f3ee;
+  --muted: #b9c6c0;
+  --line: rgba(172, 200, 187, .20);
+  --accent: #b6dac8;
+  --accent-2: #d6e9dc;
+}
+body {
+  background:
+    radial-gradient(ellipse 77% 27% at 48% -8%, rgba(107, 143, 128, .14), transparent 82%),
+    radial-gradient(ellipse 40% 35% at 100% 38%, rgba(91, 118, 112, .045), transparent 95%),
+    linear-gradient(180deg, #0b1416 0%, #0b1114 54%, #090e11 100%);
+}
+.hero {
+  background:
+    radial-gradient(ellipse 75% 105% at 105% 0%, rgba(111, 150, 132, .105), transparent 80%),
+    linear-gradient(137deg, rgba(22, 36, 36, .97), rgba(12, 22, 25, .99) 75%);
+  border-color: rgba(177, 211, 191, .20);
+  box-shadow: 0 28px 76px rgba(0, 0, 0, .18);
+}
+.hero::before { opacity: .46; }
+.lead { color: #cbd5cf; }
+.eyebrow, .section-kicker { color: #b7d6c4; }
+.header-note { color: #9aaea6; }
+.header-note span { color: #6f9186; }
+.button-primary { background: var(--accent); border-color: var(--accent); color: #12231e; }
+.button-primary:hover { background: var(--accent-2); }
+.button-secondary { border-color: rgba(193, 216, 201, .25); }
+.button-secondary:hover { border-color: rgba(182, 218, 200, .48); background: rgba(182, 218, 200, .055); }
+.card {
+  background: linear-gradient(150deg, rgba(24, 38, 39, .90), rgba(13, 24, 27, .94));
+  border-color: rgba(177, 211, 191, .16);
+}
+.card::before { background: linear-gradient(90deg, rgba(182, 218, 200, .30), transparent 78%); }
+.card:hover { border-color: rgba(182, 218, 200, .35); }
+.service-index { color: #a6beb2; }
+.card p { color: #c5d0ca; font-size: .94rem; }
+.development-tag {
+  background: rgba(182, 218, 200, .065);
+  border-color: rgba(182, 218, 200, .24);
+  color: #c0dccb;
+}
+.approach {
+  background: linear-gradient(135deg, rgba(24, 39, 39, .87), rgba(12, 24, 27, .90));
+  border-color: rgba(177, 211, 191, .18);
+}
+.approach-description { color: #bfcfc6; }
+.step { background: rgba(9, 19, 21, .50); border-color: rgba(177, 211, 191, .14); }
+.step p { color: #c2cfc6; font-size: .91rem; }
+.footer-legal { color: #a1b2a8; }
+.footer-contact span { color: #adbbb3; }
+@media (max-width: 820px) {
+  .card p { font-size: .85rem; }
+}
+@media (max-width: 680px) {
+  .card p { font-size: .94rem; }
 }
 
     </style>
