@@ -21,6 +21,6 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          for file in index.html styles.css; do
-            curl --fail --silent --show-error --ssl-reqd --user "$FTP_USERNAME:$FTP_PASSWORD" --upload-file "$file" "ftp://$FTP_SERVER/$file"
+          for file in index.html styles.css assets/hero-blue-waves.svg; do
+            curl --fail --silent --show-error --ssl-reqd --ftp-create-dirs --user "$FTP_USERNAME:$FTP_PASSWORD" --upload-file "$file" "ftp://$FTP_SERVER/$file"
           done
