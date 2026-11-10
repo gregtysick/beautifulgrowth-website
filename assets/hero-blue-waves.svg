@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="back" x1="365" y1="515" x2="1035" y2="135" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132945" stop-opacity="0"/>
+      <stop offset=".30" stop-color="#265B92" stop-opacity=".26"/>
+      <stop offset=".7" stop-color="#3D87C8" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#7DB9EA" stop-opacity=".36"/>
+    </linearGradient>
+    <linearGradient id="front" x1="450" y1="545" x2="1070" y2="195" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143B6A" stop-opacity=".02"/>
+      <stop offset=".35" stop-color="#255C91" stop-opacity=".36"/>
+      <stop offset=".72" stop-color="#3F83BC" stop-opacity=".51"/>
+      <stop offset="1" stop-color="#91C4EF" stop-opacity=".58"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="335" y1="580" x2="1150" y2="315" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#407AAE" stop-opacity="0"/>
+      <stop offset=".36" stop-color="#63A7E0" stop-opacity=".48"/>
+      <stop offset=".7" stop-color="#B3D9FF" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#D4EAFF" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="upperRidge" x1="430" y1="600" x2="1110" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C70AF" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#5098D9" stop-opacity=".39"/>
+      <stop offset=".70" stop-color="#ABD9FF" stop-opacity=".87"/>
+      <stop offset="1" stop-color="#BFDFFF" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="820" y1="355" x2="1060" y2="585" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DBFF0" stop-opacity=".32"/>
+      <stop offset=".47" stop-color="#275F9B" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#0B1E39" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(975 240) rotate(165) scale(410 300)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BACED" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#6BACED" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <path fill="url(#halo)" d="M350 0H1100V600H350Z"/>
+  <path d="M160 620C412 575 520 525 690 458C850 394 1025 377 1135 332L1135 640Z" fill="url(#back)"/>
+  <path d="M350 634C560 574 706 475 835 325C923 218 1010 158 1135 107L1135 638Z" fill="url(#front)"/>
+  <path d="M650 585C765 523 880 445 961 346C1023 275 1088 246 1145 234L1145 605Z" fill="url(#surface)"/>
+  <path d="M165 610C392 571 536 500 705 451C861 405 1038 367 1136 331" stroke="url(#ridge)" stroke-width="3" opacity=".38" filter="url(#blur)"/>
+  <path d="M165 610C392 571 536 500 705 451C861 405 1038 367 1136 331" stroke="url(#ridge)" stroke-width="1.55" opacity=".78"/>
+  <path d="M349 635C567 567 699 484 829 331C929 215 1011 153 1132 109" stroke="url(#upperRidge)" stroke-width="5.5" opacity=".58" filter="url(#blur)"/>
+  <path d="M349 635C567 567 699 484 829 331C929 215 1011 153 1132 109" stroke="url(#upperRidge)" stroke-width="1.7" opacity=".93"/>
+</svg>
